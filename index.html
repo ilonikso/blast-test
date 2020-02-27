@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blast Coin Launcher</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+</head>
+<body>
+
+<div class="main-navigation__section">
+<div class="container main-navigation__wrapper">
+ 
+     <nav class="navbar main-navigation  navbar-expand-lg navbar-dark">
+     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class=""><img src="img/menu_icon.png" alt=""></span>
+    	
+  	</button>
+  	<a class="navbar-brand" href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="52" viewBox="0 0 140 52">
+  <image id="Blast_Logo" data-name="Blast Logo" width="140" height="50" xlink:href="data:img/png;base64,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"/>
+</svg>
+</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class=""><img src="img/sign-in_logo.png" alt=""></span>
+  	</button>
+  	
+
+  	<div class="collapse navbar-collapse" id="navbar1">
+    	<ul class="navbar-nav ml-auto  my-2 my-lg-0">
+      		<li class="nav-item active">
+        		<a class="nav-link" href="#">Login <span class="sr-only">(current)</span></a>
+      		</li>
+		    <li class="nav-item">
+		    	<a class="nav-link" href="#">Register</a>
+		    </li>
+      		<li class="nav-item">
+		    	<a class="nav-link" href="#">What is Blast?</a>
+		    </li>
+		    <li class="nav-item">
+		    	<a href="#" class="btn btn-primary card__button">Launch your project</a>
+		    	
+		    </li>
+    	</ul>
+    	
+  	</div>
+</nav>
+
+
+</div>
+<div class="container main-navigation__wrapper">
+    <div class="row justify-content-center">
+        <h1 class="main-navigation__title col col-md-9">Launch your blockchain project</h1>
+        <p class="main-navigation__text col-md-8">Aliquam venenatis imperdiet velit, sit amet consectetur est blandit eget. Donec at libero in dui interdum consectetur. Duis iaculis erat in arcu tristique, quis luctus purus mattis. Vivamus gravida massa at mattis tincidunt.</p>
+    </div>
+    <div class="row">
+    <div class="row justify-content-between main-navigation__block">
+            <div class="main-navigation__block-image col-lg-5">
+                <span class="main-navigation__block-text">Upcoming launch of</span>
+                <div class="main-navigation__block-svg"><img src="img/c_bet_logo.png" alt="logo">
+                </div>
+                <p class="main-navigation__paragrath">Aliquam venenatis imperdiet velit, sit amet ectetur est blandit eget. Donec at libero in dui interdum </p>
+            </div>
+            <div class="main-navigation__block-table col col-lg-6">
+                <span class="main-navigation__block-table-header">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse culpa unde cumque.</span>
+                <div class="main-navigation__table clearfix">
+                    <div class="main-navigation__table-item">
+                        <span>47</span>
+                        <span class="text-uppercase">days</span>
+                    </div>
+                    <div class="main-navigation__table-item">
+                        <span>7</span>
+                        <span class="text-uppercase">hours</span>
+                    </div>
+                    <div class="main-navigation__table-item">
+                        <span>53</span>
+                        <span class="text-uppercase">minutes</span>
+                    </div>
+                    <div class="main-navigation__table-item">
+                        <span>42</span>
+                        <span class="text-uppercase">Seconds</span>
+                    </div>
+                    
+                </div>
+                <a href="#" class="btn card__button btn-primary text-uppercase">CTA Button</a>
+            </div>
+    </div>
+    </div>
+</div>
+</div>
+<div class="partners__section">
+    <div class="container">
+       <h2 class="partners__header">Our Ecosystem Partners</h2>
+        <div class="row justify-content-around">
+           
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/efin_logo-mobile.png">
+                <img src="img/efin_logo-desktop.png" alt="efin">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/tokenpay_logo-mobile.png">
+                <img src="img/tokenpay_logo-desktop.png" alt="tokenpay">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/l_coin_logo.png">
+                <img src="img/l_coin_logo-desktop.png" alt="l_coin">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/vegre_logo.png">
+                <img src="img/vegre_logo-desktop.png" alt="verge">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/inf_logo.png">
+                <img src="img/inf_logo-desktop.png" alt="inf">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/blocksize_logo.png">
+                <img src="img/blocksize_logo-desktop.png" alt="blocksize">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/tokensuiss_logo-mobile.png">
+                <img src="img/tokensuiss_logo-desktop.png" alt="tokensuiss">
+                </picture>
+            </div>
+           <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/cryptobet_logo-mobile.png">
+                <img src="img/cryptobet_logo-desktop.png" alt="cryptobet">
+                </picture>
+            </div>
+            <div class="partners__item">
+               <picture>
+               <source media="(max-width:540px)" srcset="img/tokenbet_logo-mobile.png">
+                <img src="img/tokenbet_logo-desktop.png" alt="tokenbet">
+                </picture>
+            </div>
+            <div class="partners__item">
+                <picture>
+               <source media="(max-width:540px)" srcset="img/WG-bank_logo-mobile.png">
+                <img src="img/WG-bank_logo-desktop.png" alt="wg-bank">
+                </picture>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    <div class="what-is__section">
+        <div class="container">
+           <h2 class="what-is__header">What is Blast?</h2>
+            <div class="row">
+                <p class="what-is__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis, consectetur accumsan urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+                <p class="what-is__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis, consectetur accumsan urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+            </div>
+        </div>
+    </div>
+    <div class="IEO__section">
+        <div class="container">
+           <h2 class="IEO__header">What Are Behavioral-Based Mining Rewards?</h2>
+            <div class="row justify-content-center">
+               <picture>
+               <source media="(max-width : 540px)" srcset="img/IEO_picture.png">
+                <img src="img/IEO_picture_desktop.png" alt="Blast IEO lifecycle" class="IEO__picture">
+                </picture>
+                <div class="IEO__text-item clearfix">
+                    <span>1</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sunt dolorem</p>
+                </div>
+                <div class="IEO__text-item">
+                    <span>2</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sunt dolorem</p>
+                </div>
+                <div class="IEO__text-item">
+                    <span>3</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque sunt dolorem</p>
+                </div>
+            </div>
+            
+    </div>
+    </div>
+    <div class="IEO-table__section">
+        <div class="container">
+           <h2 class="IEO-table__header">Crypto-Based Rewards Programs Are the Future</h2>
+            <div class="row">
+                <p class="IEO-table__text">Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis,san urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+                <p class="IEO-table__text">Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis,san urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+            </div>
+            <div class="row IEO__table-block-new">
+               <h3 class="IEO__table-block-new-header">BTC Value Wager to Earn 1 CBET</h3>
+               <p class="IEO__table-block-new-text">There are 6 mining stages of 10 million CBET each.</p>
+                
+                <table class="IEO-table__table-new ">
+  <thead class="IEO-table__table-header-new">
+    <tr>
+      <th scope="col">BTC Value to Wager</th>
+      <th scope="col">Amount of CBET Mined</th>
+      
+    </tr>
+  </thead>
+  <tbody class="IEO-table__table-body-new">
+    <tr>
+      <td>0.01</td>
+      <td>From 1 to 10,000,000</td>
+    </tr>
+    <tr>
+      <td>0.0125</td>
+      <td>From 10,000,001 to 20,000,000</td>
+    </tr>
+    <tr>
+      <td>0.0150</td>
+      <td>From 20,000,001 to 30,000,000</td>
+    </tr>
+    <tr>
+      <td>0.0175</td>
+      <td>From 30,000,001 to 40,000,000</td>
+    </tr>
+    <tr>
+      <td>0.02</td>
+      <td>From 40,000,001 to 50,000,000</td>
+    </tr>
+    <tr>
+      <td>0.0225</td>
+      <td>From 50,000,001 to 60,000,000</td>
+    </tr>
+    
+    
+  </tbody>
+</table>
+                <table class="IEO-table__table-mobile ">
+  <thead class="">
+    
+  </thead>
+  <tbody class="IEO-table__table-body-mobile-new">
+    
+     
+     <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.01</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 1 to 10,000,000</td>
+      </tr>
+      <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.0125</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 10,000,001 to 20,000,000</td>
+     </tr>
+     <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.015</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 20,000,001 to 30,000,000</td>
+     </tr>
+     <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.0175</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 30,000,001 to 40,000,000</td>
+     </tr>
+     <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.02</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 40,000,001 to 50,000,000</td>
+     </tr>
+     <tr>
+         <th>BTC Value to Wager</th>
+         <td>0.0225</td>
+     </tr>
+     <tr>
+          <th>Amount of CBET Mined</th>
+          <td>from 50,000,001 to 60,000,000</td>
+     </tr>
+
+    
+    
+    
+  </tbody>
+</table>
+                      
+                      
+                       <p class="IEO__table-block-new-text-small">*Note that to earn CBET rewards, ONLY the wager amounts matter. It is a player rewards system based on
+volume of play, regardless of win or loss by the player.</p>
+                        
+            </div>
+            <div class="row">
+                <p class="IEO-table__text">Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis,san urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis,san urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+                <p class="IEO-table__text">Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis,san urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+            </div>
+            
+            
+        </div>
+    </div>
+    <div class="eFin__section">
+        <div class="container">
+           <h2 class="eFin__header">Join eFIN Partner and Get Airdrops of Launched Coins</h2>
+            <div class="row">
+                <p class="eFin__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis, consectetur accumsan urna. Suspendisse potenti. Aenean ultrices enim a libero facilisis, ut aliquet lacus placerat. Quisque ornare aliquam lacus vel semper.</p>
+                <p class="eFin__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non, mattis quam. Nullam odio mauris, euismod ut est quis, consectetur accumsan urna. Non, mattis quam. Nullam odio mauris, euismod ut est quis, consectetur accumsan urna.</p>
+            </div>
+            
+            <div class="row justify-content-center"><a href="#" class="btn card__button btn-primary text-uppercase eFin__button">Find out more</a>  </div>
+        </div>
+    </div>
+    <div class="footer__section">
+        <div class="container">
+           <h2 class="footer__header">Get in Touch with Us</h2>
+            <div class="row justify-content-center">
+                <div class="footer__form col col-lg-4">
+                    <form action="">
+                        <input  class="footer__input" name="user-name" type="text" required  placeholder="Your Name*">
+                        <input class="footer__input" name="user-email" type="email" required  placeholder="Email Address*">
+                        <textarea class="footer__input" name="message" id="" cols="30" rows="4" placeholder="Message"></textarea>
+                        <div class="g-recaptcha" data-sitekey="your_site_key"></div>    
+                   <input type="submit" value="Send us a message" class="btn card__button footer__button">
+                    </form>
+                </div>
+                
+                <div class="footer__link col col-lg-5">
+                <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non auctor neque. Duis in nibh feugiat, tincidunt felis non. Duis in nibh feugiat, tincidunt felis non</p>
+                <ul class="footer__links">
+                    <li><i class="fab fa-twitter"></i><a href="#">twitter.com/blastcx</a></li>
+                    <li><i class="fab fa-telegram"></i><a href="#">t.me/blastcx</a></li>
+                    <li><i class="fab fa-youtube"></i><a href="#">youtube.com/blastcx</a></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ 
+</body>
+</html>
